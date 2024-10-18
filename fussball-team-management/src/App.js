@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import ResponsiveAppBar from './components/navigation/responsiveAppBar';
+import Players from './pages//player/player';
+import Calender from './pages/calender/calender';
+import Home from './pages/home/home';
+import Training from './pages/training/training';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ResponsiveAppBar></ResponsiveAppBar>
+      <div style={{ paddingTop: '64px' }}>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/players" element={<Players />} />
+          <Route path="/training" element={<Training />} />
+          <Route path="/calender" element={<Calender />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
+  
 export default App;
+
