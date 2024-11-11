@@ -5,6 +5,7 @@ import Players from './pages//player/player';
 import Calender from './pages/calender/calender';
 import Home from './pages/home/home';
 import Training from './pages/training/training';
+import PlayerDetails from './pages/player/components/playersDetails';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/players" element={<Players />} />
+          <Route path="/players/:id" element={<PlayerDetails />} /> {/* Neue Route für die Detailansicht */}
           <Route path="/training" element={<Training />} />
           <Route path="/calender" element={<Calender />} />
         </Routes>

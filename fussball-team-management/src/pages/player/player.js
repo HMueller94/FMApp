@@ -1,11 +1,13 @@
 import React from 'react';
+import PlayersTable from './components/playersTable'; // Import the PlayersTable component
+import { Box } from '@mui/material';
 
 function Players() {
   return (
-    <div>
-      <h1>Players Management</h1>
-      <p>Here you can manage your team’s players.</p>
-    </div>
+    <Box sx={{ margin: 4 }}> {/* Hier wird der Abstand um die Komponente erhöht */}
+      <h1>Players</h1>
+      <PlayersTable />
+    </Box>
   );
 }
 
